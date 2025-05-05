@@ -14,10 +14,16 @@
     <body>
         <h1>bitsurf</h1>
         <div class="ocean">
-            <!-- Moving Wave -->
-            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,30 Q360,60 720,30 T1440,30 V100 H0 Z" fill="white" opacity="0.16" />
+            <!-- Background Wave 1 -->
+            <svg class="wave wave-back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2160 100" preserveAspectRatio="none">
+              <path d="M0,30 Q360,60 720,30 T1440,30 T2160,30 V100 H0 Z" fill="white" opacity="0.2" />
             </svg>
+          
+            <!-- Background Wave 2 -->
+            <svg class="wave wave-front" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2160 100" preserveAspectRatio="none">
+              <path d="M0,40 Q360,20 720,40 T1440,40 T2160,40 V100 H0 Z" fill="white" opacity="0.3" />
+            </svg>
+          
             <!-- Surfer -->
             <svg class="surfer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="60" height="60">
                 <!-- Surfboard -->

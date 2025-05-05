@@ -71,17 +71,32 @@ h1 {
     left: 0;
     width: 200%;
     height: 100px;
-    animation: wave-move 10s linear infinite;
     z-index: 1;
+    opacity: 0.3; /* default */
 }
 
-/* Animate the wave drifting sideways */
-@keyframes wave-move {
+/* Back wave (slower) */
+.wave-back {
+    animation: wave-back-move 20s linear infinite;
+}
+
+/* Front wave (faster) */
+.wave-front {
+    animation: wave-front-move 10s linear infinite;
+}
+
+/* Keyframes for each wave */
+@keyframes wave-back-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-25%); }
+}
+
+@keyframes wave-front-move {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* Make sure the surfer appears above the wave */
+/* Make sure surfer stays above everything */
 .surfer {
     position: absolute;
     bottom: 50px;
