@@ -65,13 +65,30 @@ h1 {
     margin-top: 2em;
 }
 
-/* Surfer SVG */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    animation: wave-move 10s linear infinite;
+    z-index: 1;
+}
+
+/* Animate the wave drifting sideways */
+@keyframes wave-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Make sure the surfer appears above the wave */
 .surfer {
     position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     animation: float 3s ease-in-out infinite;
+    z-index: 2;
 }
 
 /* Surfer bobbing animation */
