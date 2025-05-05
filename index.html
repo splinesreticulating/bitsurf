@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>bitsurf</title>
+        <link rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'><text y='60' font-size='60'>🌊</text></svg>">
+        <meta name="description" content="bitsurf">
+        <link rel="stylesheet" href="style4miles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>bitsurf</title>
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'><text y='60' font-size='60'>🌊</text></svg>">
-    <meta name="description" content="bitsurf">
-    <link rel="stylesheet" href="style4miles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
+    <body>
+        <h1>bitsurf</h1>
+        <div class="ocean">
+            <svg class="surfer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="60" height="60">
+                <!-- Surfboard -->
+                <ellipse cx="60" cy="100" rx="35" ry="8" fill="#ffcc66" stroke="#cc9933" stroke-width="2" />
 
-<body>
-    <h1>bitsurf</h1>
-    <div class="ocean">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Surfer_icon.svg/512px-Surfer_icon.svg.png"
-            alt="Surfer" class="surfer">
-    </div>
-</body>
+                <!-- Body -->
+                <circle cx="60" cy="50" r="10" fill="#ffdbac" stroke="#d3a171" stroke-width="2" />
+
+                <!-- Torso -->
+                <rect x="55" y="58" width="10" height="20" fill="#4db8ff" stroke="#3399cc" stroke-width="2" rx="2" />
+
+                <!-- Arms -->
+                <line x1="55" y1="60" x2="40" y2="75" stroke="#ffdbac" stroke-width="3" />
+                <line x1="65" y1="60" x2="80" y2="75" stroke="#ffdbac" stroke-width="3" />
+
+                <!-- Legs -->
+                <line x1="57" y1="78" x2="50" y2="95" stroke="#4db8ff" stroke-width="3" />
+                <line x1="63" y1="78" x2="70" y2="95" stroke="#4db8ff" stroke-width="3" />
+
+                <!-- Hair (cute tuft) -->
+                <path d="M55 42 Q60 35 65 42" stroke="#663300" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+    </body>
 </html>
