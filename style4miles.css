@@ -1,12 +1,72 @@
-.ocean {
-    background: linear-gradient(to top, #0077be 0%, #00aaff 100%);
-    height: 300px;
-    position: relative;
-    overflow: hidden;
+/* Base box sizing for consistency */
+html {
+    box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Page styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,
+      #42aaf5 0%,  /* Light sky blue at top */
+      #00aaff 40%, /* Mid blue (near horizon) */
+      #0077be 80%, /* Deeper blue */
+      #005f9e 100% /* Deep ocean at very bottom */
+    );
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Heading styling */
+h1 {
+    margin-top: 1em;
+    font-size: 2.2em;
+    text-shadow: 2px 2px #333;
+    word-break: break-word;
+}
+
+/* Wrapper for any future cover photos */
+.cover-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Cover photo itself */
+.cover-photo {
+    margin: 2em auto 1.5em;
+    width: 95vw;
+    max-width: 700px;
+    border: 4px solid white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    height: auto;
+    display: block;
+}
+
+/* Ocean area */
+.ocean {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+/* Surfer SVG */
 .surfer {
-    width: 60px;
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -14,16 +74,34 @@
     animation: float 3s ease-in-out infinite;
 }
 
+/* Surfer bobbing animation */
 @keyframes float {
-    0% {
-        transform: translateX(-50%) translateY(0);
-    }
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
 
-    50% {
-        transform: translateX(-50%) translateY(-10px);
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 0 5vw;
+        justify-content: flex-start;
+        min-height: 100vh;
     }
-
-    100% {
-        transform: translateX(-50%) translateY(0);
+    h1 {
+        font-size: 1.2em;
+        margin-top: 1.2em;
+    }
+    .cover-photo-wrapper {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .cover-photo {
+        margin: 1em auto 0.5em;
+        width: 90vw;
+        max-width: 90vw;
+        border-width: 2px;
     }
 }
