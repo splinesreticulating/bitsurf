@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* Background sky color as a fallback (light blue) */
+    background-color: #87CEEB;
+    overflow: hidden;
+  }
+  
+  #scene {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Preserve pixelated look when canvas is scaled up */
+    image-rendering: pixelated;
+    /* No interpolation on canvas image upscaling (for some browsers) */
+    image-rendering: crisp-edges;
+  }
+  
+  #ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none; /* UI is non-interactive overlay */
+  }
+  
+  #status {
+    /* Status text (e.g., "Connected") styling */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    display: none; /* Hidden by default, shown on updates */
+    margin: 5px auto;
+    width: fit-content;
+    border-radius: 3px;
+  }
+  
